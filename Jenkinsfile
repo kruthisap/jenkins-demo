@@ -4,19 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building application...'
+                echo 'Building...'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
+                error 'Pipeline Failed!'
             }
         }
     }
